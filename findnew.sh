@@ -6,4 +6,5 @@ do
   name=$(echo $a|sed 's/.$//')
   cp -v $COINSCRIPTS/.template.daemon $COINSCRIPTS/$name.daemon
   sed -i "s/template/$name/g" $COINSCRIPTS/$name.daemon
+  chmod +x $COINSCRIPTS/$name.daemon
 done
